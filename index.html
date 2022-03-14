@@ -10,7 +10,19 @@
   </head>
 
   <body>
-    <svg id="radar"></svg>
+    <div>
+      <div style="width: 100%">
+        <img
+          src="images/logo.png"
+          style="float: right"
+          width="150"
+          height="55"
+        />
+      </div>
+      <div>
+        <svg id="radar"></svg>
+      </div>
+    </div>
 
     <script>
       radar_visualization({
@@ -22,7 +34,7 @@
           grid: "#bbb",
           inactive: "#ddd",
         },
-        title: "Pearl Data Direct Tech Radar — 2022.03",
+        title: "Tech Radar — 2022.03",
         quadrants: [
           { name: "Languages & Frameworks" },
           { name: "Infrastructure" },
