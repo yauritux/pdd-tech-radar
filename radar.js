@@ -276,6 +276,7 @@ function radar_visualization(config) {
 
   // draw title and legend (only in print layout)
   if (config.print_layout) {
+    // printing quadrants name, e.g. : Languages & Frameworks, etc.
     // title
     radar
       .append("text")
@@ -306,6 +307,7 @@ function radar_visualization(config) {
         .style("font-family", "Arial, Helvetica")
         .style("font-size", "18px");
       for (var ring = 0; ring < 4; ring++) {
+        // printing ring name , e.g. ADOPT | ASSES | TRIAL | HOLD
         legend
           .append("text")
           .attr("transform", legend_transform(quadrant, ring))
@@ -313,6 +315,12 @@ function radar_visualization(config) {
           .style("font-family", "Arial, Helvetica")
           .style("font-size", "12px")
           .style("font-weight", "bold");
+        // if (ring == 2) {
+        //   // console.log(
+        //   //   "segment name = " + JSON.stringify(segmented[quadrant][ring], 2)
+        //   // );
+        //   console.log("segment name = " + segmented[quadrant][ring][2].label);
+        // }
         legend
           .selectAll(".legend" + quadrant + ring)
           .data(segmented[quadrant][ring])
